@@ -1,0 +1,13 @@
+version: 0.0
+os: linux
+files:
+  - source: server/
+    destination: /usr/share/nginx/html
+    overwrite: true
+hooks:
+  BeforeInstall:
+    - location: server/scripts/BeforeInstallHook.sh
+      timeout: 300
+  AfterInstall:
+    - location: server/scripts/AfterInstallHook.sh
+      timeout: 300
