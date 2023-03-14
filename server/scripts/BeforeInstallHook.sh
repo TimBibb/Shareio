@@ -1,4 +1,4 @@
 #!/bin/bash
 set -e
 yum update -y
-pm2 update
+~/.nvm/versions/node/v16.19.1/bin/pm2 update
