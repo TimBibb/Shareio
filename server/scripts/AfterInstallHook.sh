@@ -6,3 +6,4 @@ npm install
 
 # Start the server using PM2 with the ecosystem.config.js file
 pm2 start /home/ec2-user/ecosystem.config.js
+pm2 status
