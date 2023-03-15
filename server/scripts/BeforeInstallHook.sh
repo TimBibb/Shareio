@@ -3,4 +3,4 @@ set -e
 source ~/.bashrc
 pwd
 yum update -y
-pm2 update
+$NVM_BIN/pm2 update
