@@ -1,20 +1,21 @@
+import NavBar from "./Navbar";
+import UserOnboarding from "./UserOnboarding";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Mood from "./Mood";
+
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<UserOnboarding />} exact />
+          <Route path="/mood" element={<Mood />} />
+          {/* <Route path="/meditation" component={Meditation} /> */}
+          {/* <Route path="/journal" component={Journal} /> */}
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
